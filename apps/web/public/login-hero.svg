@@ -1,0 +1,59 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract financial insight illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0C10"/>
+      <stop offset="52%" stop-color="#10131A"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5A4A23"/>
+      <stop offset="45%" stop-color="#B8923F"/>
+      <stop offset="100%" stop-color="#D6BA71"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(860 195) rotate(125) scale(440 330)">
+      <stop offset="0%" stop-color="#B8923F" stop-opacity="0.34"/>
+      <stop offset="70%" stop-color="#B8923F" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#B8923F" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="560" fill="url(#bg)"/>
+  <rect width="1200" height="560" fill="url(#glow)"/>
+
+  <g opacity="0.16">
+    <path d="M0 88H1200" stroke="#C6A861" stroke-width="1"/>
+    <path d="M0 170H1200" stroke="#C6A861" stroke-width="1"/>
+    <path d="M0 252H1200" stroke="#C6A861" stroke-width="1"/>
+    <path d="M0 334H1200" stroke="#C6A861" stroke-width="1"/>
+    <path d="M0 416H1200" stroke="#C6A861" stroke-width="1"/>
+    <path d="M108 0V560" stroke="#C6A861" stroke-width="1"/>
+    <path d="M284 0V560" stroke="#C6A861" stroke-width="1"/>
+    <path d="M460 0V560" stroke="#C6A861" stroke-width="1"/>
+    <path d="M636 0V560" stroke="#C6A861" stroke-width="1"/>
+    <path d="M812 0V560" stroke="#C6A861" stroke-width="1"/>
+    <path d="M988 0V560" stroke="#C6A861" stroke-width="1"/>
+  </g>
+
+  <g opacity="0.82">
+    <path d="M56 454C148 424 206 392 280 348C358 301 429 287 500 268C579 247 662 213 742 169C817 128 894 113 968 136C1022 153 1066 184 1144 246" stroke="url(#brass)" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M56 493C146 465 228 447 303 410C386 370 456 332 545 324C626 317 710 289 787 250C846 220 936 187 1030 215C1080 230 1118 249 1144 270" stroke="#D3B66D" stroke-opacity="0.52" stroke-width="2" stroke-linecap="round"/>
+    <path d="M56 524C164 507 236 486 336 456C430 427 509 420 603 393C702 364 790 325 873 292C950 261 1030 252 1144 276" stroke="#A98A46" stroke-opacity="0.45" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#blurSoft)">
+    <circle cx="412" cy="318" r="3.8" fill="#E2C67D"/>
+    <circle cx="622" cy="245" r="4.2" fill="#E2C67D"/>
+    <circle cx="786" cy="169" r="4.8" fill="#F0D992"/>
+    <circle cx="973" cy="137" r="4.1" fill="#E2C67D"/>
+  </g>
+
+  <g opacity="0.34">
+    <rect x="804" y="88" width="314" height="178" rx="6" stroke="#B8923F"/>
+    <path d="M830 122H1089" stroke="#B8923F" stroke-opacity="0.6"/>
+    <path d="M830 152H1062" stroke="#B8923F" stroke-opacity="0.45"/>
+    <path d="M830 182H980" stroke="#B8923F" stroke-opacity="0.35"/>
+  </g>
+</svg>

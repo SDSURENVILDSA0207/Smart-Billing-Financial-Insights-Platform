@@ -1,0 +1,22 @@
+{
+  "name": "smart-billing-financial-insights-platform",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "clean:web": "npm --workspace apps/web run clean",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:web:reset": "npm --workspace apps/web run clean && npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace services/api-gateway run dev",
+    "dev:python": "cd services/logic-engine && .venv/bin/uvicorn app.main:app --reload --port 8001",
+    "dev": "concurrently --kill-others-on-fail \"npm run dev:web\" \"npm run dev:api\" \"npm run dev:python\"",
+    "dev:reset": "concurrently --kill-others-on-fail \"npm run dev:web:reset\" \"npm run dev:api\" \"npm run dev:python\"",
+    "build": "npm run build -ws"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

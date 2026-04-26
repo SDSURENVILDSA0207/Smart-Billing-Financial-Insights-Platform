@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — @apply cannot reliably reference extended theme colors in this setup */
+:root {
+  --ink: #0a0a0c;
+  --ink-2: #0e0e11;
+  --ink-3: #131316;
+  --ink-4: #1a1a1f;
+  --warm: #e8e4dc;
+  --warm-muted: #9c9890;
+  --brass: #b8923f;
+  --brass-bright: #d4b86a;
+  --shadow-lift: 0 1px 0 0 rgba(232, 228, 220, 0.06) inset, 0 24px 48px -24px rgba(0, 0, 0, 0.65);
+}
+
+@layer base {
+  body {
+    @apply min-h-screen font-sans antialiased;
+    background-color: var(--ink);
+    color: var(--warm);
+    font-size: 15px;
+  }
+}
+
+::selection {
+  background: rgba(184, 146, 63, 0.35);
+  color: #fdfcfa;
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid rgba(184, 146, 63, 0.55);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .panel {
+    border: 1px solid rgba(232, 228, 220, 0.08);
+    background-color: var(--ink-3);
+    border-radius: 3px;
+    box-shadow: var(--shadow-lift);
+  }
+
+  .panel-tight {
+    border: 1px solid rgba(232, 228, 220, 0.06);
+    background-color: var(--ink-2);
+    border-radius: 3px;
+  }
+
+  .field {
+    @apply w-full rounded-sm px-3 py-3 text-sm focus:outline-none;
+    border: 1px solid rgba(232, 228, 220, 0.12);
+    background-color: var(--ink-2);
+    color: var(--warm);
+  }
+  .field::placeholder {
+    color: var(--warm-muted);
+  }
+  .field:focus {
+    border-color: var(--brass);
+    box-shadow: 0 0 0 1px rgba(184, 146, 63, 0.35);
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-11 items-center justify-center rounded-sm px-4 py-2.5 text-sm font-semibold transition active:translate-y-px disabled:cursor-not-allowed disabled:opacity-60;
+    background-color: var(--brass);
+    color: var(--ink);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.12) inset;
+  }
+  .btn-primary:hover:not(:disabled) {
+    background-color: var(--brass-bright);
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-11 items-center justify-center rounded-sm px-4 py-2.5 text-sm font-medium transition active:translate-y-px;
+    border: 1px solid rgba(232, 228, 220, 0.14);
+    color: var(--warm);
+  }
+  .btn-secondary:hover {
+    border-color: rgba(184, 146, 63, 0.4);
+    background-color: rgba(184, 146, 63, 0.05);
+  }
+
+  .link-quiet {
+    @apply text-sm font-medium underline underline-offset-4 transition;
+    color: rgba(212, 184, 106, 0.9);
+    text-decoration-color: rgba(184, 146, 63, 0.3);
+  }
+  .link-quiet:hover {
+    text-decoration-color: rgba(184, 146, 63, 0.7);
+  }
+
+  .table-shell {
+    @apply overflow-hidden;
+    border: 1px solid rgba(232, 228, 220, 0.08);
+    background-color: var(--ink-2);
+    border-radius: 3px;
+  }
+
+  .table-head {
+    @apply px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.18em];
+    border-bottom: 1px solid rgba(232, 228, 220, 0.06);
+    background-color: rgba(26, 26, 31, 0.8);
+    color: var(--warm-muted);
+  }
+
+  .divide-rows > * + * {
+    border-top: 1px solid rgba(232, 228, 220, 0.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .btn-secondary {
+    transition: none;
+  }
+}
